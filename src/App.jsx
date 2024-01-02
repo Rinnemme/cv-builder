@@ -23,25 +23,25 @@ function App() {
         <button onClick = {() => {setStatus('editingDetails')}}>
           Edit Personals
         </button>
-        <button onClick = {() => {setStatus('editingEducation')}}>
-          Edit Education
+        <button onClick = {() => {setStatus('editingSkills')}}>
+          Edit Skills
         </button>
         <button onClick = {() => {setStatus('editingWork')}}>
           Edit Work
         </button>
-        <button onClick = {() => {setStatus('editingSkills')}}>
-          Edit Skills
+        <button onClick = {() => {setStatus('editingEducation')}}>
+          Edit Education
         </button>
       </div>
       {status === 'editingDetails' && <DetailsEditor details={personalDetails} updateDetails={setPersonalDetails} close={() => {setStatus('viewing')}}/>}
-      {status === 'editingEducation' && <EducationEditor educationArray={education} updateEducation={setEducation} close={() => {setStatus('viewing')}} generatedKey={generatedKey} updateKey={() => {setGeneratedKey(generatedKey+1)}}/>}
-      {status === 'editingWork' && <WorkHistoryEditor workArray={workHistory} updateWork={setWorkHistory} close={() => {setStatus('viewing')}} generatedKey={generatedKey} updateKey={() => {setGeneratedKey(generatedKey+1)}}/>}
       {status === 'editingSkills' && <SkillsEditor skillArray={skills} updateSkills={setSkills} close={() => {setStatus('viewing')}} generatedKey={generatedKey} updateKey={() => {setGeneratedKey(generatedKey+1)}}/>}
+      {status === 'editingWork' && <WorkHistoryEditor workArray={workHistory} updateWork={setWorkHistory} close={() => {setStatus('viewing')}} generatedKey={generatedKey} updateKey={() => {setGeneratedKey(generatedKey+1)}}/>}
+      {status === 'editingEducation' && <EducationEditor educationArray={education} updateEducation={setEducation} close={() => {setStatus('viewing')}} generatedKey={generatedKey} updateKey={() => {setGeneratedKey(generatedKey+1)}}/>}
       <div className="CV">
         <Details object={personalDetails}/>
-        <Education educationArray={education}/>
-        <WorkHistory workArray={workHistory}/>
         <Skills skillArray={skills}/>
+        <WorkHistory workArray={workHistory}/>
+        <Education educationArray={education}/>
       </div>
       
     </div>
