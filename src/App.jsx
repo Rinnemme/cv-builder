@@ -10,7 +10,7 @@ import SkillsEditor from './SkillsEditor.jsx'
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState ({name:'', phone:'', email:'', website:''})
-  const [education, setEducation] = useState ([{key: 1, institution:'', degree:'', startYear:'', endYear:'', bullets: [{key: 1, value: 'Detail'}]}])
+  const [education, setEducation] = useState ([{key: 1, institution:'', degree:'', startYear:'', endYear:'', bullets: [{key: 1, value: ''}]}])
   const [workHistory, setWorkHistory] = useState ([{key: 1, company:'', position:'', startYear:'', endYear:'', responsibilities: [{key: 1, value: ''}]}])
   const [skills, setSkills] = useState ([{key:1, value:''}])
   const [status, setStatus] = useState('viewing')
