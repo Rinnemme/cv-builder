@@ -81,7 +81,7 @@ button {
 .editor-header {
   position:absolute;
   width:100%;
-  top:4.5%;
+  top:22px;
   text-align:center;
   font-size:1.3em;
   z-index:2;

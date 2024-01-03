@@ -6,6 +6,7 @@ function SkillsEditor({skillArray, updateSkills, close, generatedKey, updateKey}
     return (
       <div className="modal">
         <div className="form-container">
+          <div className="editor-header">Relevant Skills</div>
           <form>
               <button
                 type="button"
