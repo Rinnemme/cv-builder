@@ -43,7 +43,7 @@ function EducationEditor({workArray, updateWork, close, generatedKey, updateKey}
                   >
                     ↑
                   </button>}
-                  {!workingArray[index+1] && <button 
+                  {workingArray[index+1] && <button 
                     className="arrow-button experience-down"
                     type="button"
                     onClick={() => {
